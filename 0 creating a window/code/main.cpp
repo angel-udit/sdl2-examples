@@ -5,7 +5,7 @@
 
 #include <SDL.h>
 
-int main (int , char ** )
+int main (int , char * [])
 {
     // Se hace inicializa el subsistema de vídeo de SDL:
 
@@ -15,15 +15,15 @@ int main (int , char ** )
     }
     else
     {
-        // Se crea una ventana:
+        // Se crea la ventana:
 
         SDL_Window * window = SDL_CreateWindow
         (
-            "SDL2 window example", 
-            SDL_WINDOWPOS_UNDEFINED, 
-            SDL_WINDOWPOS_UNDEFINED, 
-            800, 
-            600, 
+            "SDL2 window example",
+            SDL_WINDOWPOS_CENTERED,
+            SDL_WINDOWPOS_CENTERED,
+            1024,
+            576,
             SDL_WINDOW_SHOWN
         );
 
@@ -39,7 +39,7 @@ int main (int , char ** )
 
             if (not surface)
             {
-                SDL_Log ("Error acessing the window surface.");
+                SDL_Log ("Error accessing the window surface.");
             }
             else
             {
